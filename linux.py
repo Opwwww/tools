@@ -29,7 +29,7 @@ if cmd == "help":
    
                     
 
-                                                                    [1] -- Clear Terminal.        [2] -- Show IP.        
+                                                                    [1] -- Clear Terminal.        [2] -- Display your IP Adress.        
                 
                                                                     [3] -- Open text editor.      [4] -- Update system.*
 
