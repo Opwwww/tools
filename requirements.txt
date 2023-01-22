@@ -1,0 +1,9 @@
+colorama
+sys
+random
+requests
+subprocess
+socket
+pystyle
+platform
+
