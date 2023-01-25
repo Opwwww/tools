@@ -51,7 +51,7 @@ cmd = input(Fore.CYAN + "[" + currentTime.split(" ")[3]  + "]" + " >>> ")
 if cmd == "credits":
     print(Fore.BLUE + """
     Made by opw 
-    https://github.com/opwwww
+    https://github.com/londxv/
     """)
 if cmd == "1" or cmd == "01":
   o("clear")
