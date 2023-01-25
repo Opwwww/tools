@@ -58,7 +58,7 @@ if help == "help":
   help = input(Fore.CYAN + "[" + currentTime.split(" ")[3]  + "]" + " >>> ")
 if help == "1"or help == "01":
   print(Fore.BLUE + """
-  Made by Opw 
+  Well#9999
   https://github.com/londxv/
   """)
 if help == "2" or help == "02":
