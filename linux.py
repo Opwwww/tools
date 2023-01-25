@@ -50,7 +50,7 @@ currentTime = t.ctime()
 cmd = input(Fore.CYAN + "[" + currentTime.split(" ")[3]  + "]" + " >>> ")
 if cmd == "credits":
     print(Fore.BLUE + """
-    Made by opw 
+    Well#9999
     https://github.com/londxv/
     """)
 if cmd == "1" or cmd == "01":
