@@ -59,7 +59,7 @@ if help == "help":
 if help == "1"or help == "01":
   print(Fore.BLUE + """
   Made by Opw 
-  https://github.com/opwwww
+  https://github.com/londxv/
   """)
 if help == "2" or help == "02":
   print(Fore.GREEN + "[+]")
