@@ -30,9 +30,13 @@ print(Fore.RED+"Type help, exit,or credits, restart,back for more information.")
 gen = input(Fore.CYAN + "[" + currentTime.split(" ")[3]  + "]" + " >>> ")
 if gen == "credits":
   print(Fore.BLUE+"""
-  Well#9999
-  https://github.com/londxv/
-  well wack did the time thing 
+    Made By Opw
+    
+    Discord = "opw#7777"
+
+    Github = "github.com/Opwwww  
+   
+    Well wack did the time thing 
   """)
   gen = input(Fore.CYAN + "[" + currentTime.split(" ")[3]  + "]" + " >>> ")
 if gen == "back":
