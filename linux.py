@@ -50,8 +50,11 @@ currentTime = t.ctime()
 cmd = input(Fore.CYAN + "[" + currentTime.split(" ")[3]  + "]" + " >>> ")
 if cmd == "credits":
     print(Fore.BLUE + """
-    Well#9999
-    https://github.com/londxv/
+    Made By Opw
+    
+    Discord = "opw#7777"
+
+    Github = "github.com/Opwwww  
     """)
 if cmd == "1" or cmd == "01":
   o("clear")
