@@ -24,7 +24,7 @@ print(f.GREEN + """
 ######## ###      ###     ######       ######       ################    ###      
 """)
 currentTime = t.ctime()
-print(f.GREEN+ "[" + currentTime.split(" ")[3]  + "]" + " [*] Success loaded Webhook spammer.")
+print(f.GREEN+ "[" + currentTime.split(" ")[3]  + "]" + " [*] Success loaded Webhook spammer, Made by opw#7777")
 sleep(1)
 #Webhook
 print(f.RED + "Input webhook")
