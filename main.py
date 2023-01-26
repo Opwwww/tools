@@ -58,8 +58,11 @@ if help == "help":
   help = input(Fore.CYAN + "[" + currentTime.split(" ")[3]  + "]" + " >>> ")
 if help == "1"or help == "01":
   print(Fore.BLUE + """
-  Well#9999
-  https://github.com/londxv/
+    Made By Opw
+    
+    Discord = "opw#7777"
+
+    Github = "github.com/Opwwww  
   """)
 if help == "2" or help == "02":
   print(Fore.GREEN + "[+]")
