@@ -46,6 +46,12 @@ while True:
          [15] -- Exit                    
         
 """)
+  if yes == "credits":
+   Made By Opw
+    
+   Discord = "opw#7777"
+
+   Github = "github.com/Opwwww  
  currentTime = t.ctime()
  yes = input(Fore.CYAN + "[" + currentTime.split(" ")[3]  + "]" + " >>> ")
  if yes == "1" or yes == "01":
