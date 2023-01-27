@@ -1,4 +1,4 @@
-#Webhook spammer made by Well#9999
+#Webhook spammer made by opw#7777
 import requests as r
 import subprocess as sp
 import time as t
