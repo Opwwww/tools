@@ -4,8 +4,9 @@ import subprocess as sp
 import time as t
 from colorama import Fore as f
 from os import system
-from time import sleep 
+from time import sleep
 from sys import platform
+import signal
 headers = {"Content-Type": "application/json"}
 if platform == "win32":
     system("cls")
@@ -24,7 +25,7 @@ print(f.GREEN + """
 ######## ###      ###     ######       ######       ################    ###      
 """)
 currentTime = t.ctime()
-print(f.GREEN+ "[" + currentTime.split(" ")[3]  + "]" + " [*] Success loaded Webhook spammer, Made by opw#7777")
+print(f.GREEN+ "[" + currentTime.split(" ")[3]  + "]" + " [*] Success loaded Webhook spammer. Made by opw#7777")
 sleep(1)
 #Webhook
 print(f.RED + "Input webhook")
@@ -34,13 +35,14 @@ webhook_check = r.get(webhook)
 currentTime = t.ctime()
 if webhook_check.status_code == 404:
     currentTime = t.ctime()
-    print(f.CYAN + "[" + currentTime.split(" ")[3]  + "]" + f.RED +  " [DATA] " + "[-] FAILED TO CONNECT TO " 
-    + webhook)
+    print(f.CYAN + "[" + currentTime.split(" ")[3]  + "]" + f.MAGENTA + " [DATA] " + f.RED + " [-] FAILED TO CONNECT TO "
+
+    + f.CYAN + webhook)
     currentTime = t.ctime()
     print(f.RED + "try again.")        
     input(f.CYAN + "[" + currentTime.split(" ")[3]  + "]" + " >>> ")
 else:
-    print()
+    sleep(1)
 #username of the webhook
 currentTime = t.ctime()
 print(f.RED + "Input username of the webhook.")
@@ -71,7 +73,7 @@ proxy= {
     'http': '188.216.179.138:8118',
     'http': '194.193.59.249:8080',
     'http': '115.239.27.40:9999',
-    'http': '154.70.98.165:8080',
+    'http': '154.70.98.165:8080'
 }
 yeah = r.get(webhook)
 def black(req):
@@ -82,9 +84,11 @@ def black(req):
 requests_count = 0
 s = r.Session()
 s.auth = black
+print(f.GREEN + "[" + currentTime.split(" ")[3]  + "]" + f.MAGENTA+ " [DATA] " + f.RED + " [+]"  + f.BLUE + " STARTING.. (Press ctrl - c to stop)")
 while True:
  currentTime = t.ctime()
  while True:
+  start_time = t.time()
   yeah = r.get(webhook)
   currentTime = t.ctime()
   print(f.GREEN + "[" + currentTime.split(" ")[3]  + "]" + f.MAGENTA+ " [DATA] " + f.RED + " [+]"  + f.BLUE + " STATUS CODE:  " + f.CYAN + str(yeah.status_code))
@@ -93,19 +97,36 @@ while True:
   print(f.GREEN + "[" + currentTime.split(" ")[3]  + "]" + f.MAGENTA + " [DATA] " + f.RED + " [+]" + f.BLUE + " TOTAL MESSAGES:  " + f.CYAN + str(requests_count)) 
   sleep(1)
   r.post(webhook,headers=headers,json=data,proxies=proxy,auth=black)
-  currentTime = t.ctime()
+  r.post(webhook,headers=headers,json=data,proxies=proxy,auth=black)
+  def handler(signum, frame):
+    ye = input(f.CYAN + "[" + currentTime.split(" ")[3]  + "]" + " >>> Do you want to stop? y/N ")
+    if ye == "y" or ye == "ye" or ye == "yes":
+        print(f.GREEN + "[" + currentTime.split(" ")[3]  + "]" + f.MAGENTA + " [DATA] " + f.RED + " [*] Total Messages Sent: " + str(requests_count))
+        print(f.GREEN + "[" + currentTime.split(" ")[3]  + "]" + f.MAGENTA + " [DATA] " + f.RED + " [*] Sent it as: " + user )
+        print(f.GREEN + "[" + currentTime.split(" ")[3]  + "]" + f.MAGENTA + " [DATA] " + f.RED + " [*] Total time taken: " + "--- %s seconds ---" % (t.time() - start_time))  
+        print(f.GREEN + "[" + currentTime.split(" ")[3]  + "]" + f.MAGENTA + " [DATA] " + f.RED + " [-] Exitting..  ")
+        exit()
+    if ye == "n" or ye == "no":
+        print()
+  signal.signal(signal.SIGINT, handler)
   if yeah.status_code == 404:
     currentTime = t.ctime()
     print(f.GREEN + "[" + currentTime.split(" ")[3]  + "]" + f.MAGENTA +  " [DATA] " + f.RED + " [-] FAILED TO CONNECT TO " + webhook)
     print(f.GREEN + "[" + currentTime.split(" ")[3] + "]"  + f.MAGENTA + " [DATA] " + f.RED + " [*] RETRYING..  ")
     r.post(webhook,headers=headers,json=data,proxies=proxy,auth=black)
     sleep(3)
-    print(f.GREEN + "[" + currentTime.split(" ")[3]  + "]" + f.MAGENTA + " [DATA] " + f.RED + " [-] FAILED TO CONNECT.  ")
-    sleep(10)
-    currentTime = t.ctime()
-    print(f.GREEN + "[" + currentTime.split(" ")[3]  + "]" + "Do you want to restart? y/n")
-    y = input(f.GREEN + "[" + currentTime.split(" ")[3]  + "]" + "Do you want to restart? y/n")
-    if y == "y" or y == "yes" or y == "ye":
-        system('cmd /k "python spammer.py" ')
-    if y == "n" or y == "no":
-     exit() 
+    print(f.GREEN + "[" + currentTime.split(" ")[3]  + "]" + f.MAGENTA + " [DATA] " + f.RED + " [-] FAILED TO CONNECT. (Webhook has been deleted.) ")
+    sleep(5)
+    print(f.GREEN + "[" + currentTime.split(" ")[3]  + "]" + f.MAGENTA + " [DATA] " + f.RED + " [*] Total Messages Sent: " + str(requests_count))
+    sleep(2)
+    print(f.GREEN + "[" + currentTime.split(" ")[3]  + "]" + f.MAGENTA + " [DATA] " + f.RED + " [*] Sent it as: " + user )
+    sleep(2)
+    print(f.GREEN + "[" + currentTime.split(" ")[3]  + "]" + f.MAGENTA + " [DATA] " + f.RED + " [*] Total time taken: " + "--- %s seconds ---" % (t.time() - start_time))
+    sleep(2)
+    break
+ currentTime = t.ctime()
+ y = input(f.GREEN + "[" + currentTime.split(" ")[3]  + "]" + f.MAGENTA + " Do you want to restart? y/n >>> ")
+ if y == "y" or y == "yes" or y == "ye":
+         system('cmd /k "python spammer.py" ')
+ if y == "n" or y == "no":
+     exit()
