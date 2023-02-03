@@ -15,6 +15,7 @@ if platform == "linux" or platform == "linux2":
 if platform == "darwin":
     system("clear")
 currentTime = t.ctime()
+system("title spammer")
 print(f.GREEN + """
       :::::::: :::::::::    :::      :::   :::    :::   :::  ::::::::::::::::::: 
     :+:    :+::+:    :+: :+: :+:   :+:+: :+:+:  :+:+: :+:+: :+:       :+:    :+: 
@@ -25,7 +26,7 @@ print(f.GREEN + """
 ######## ###      ###     ######       ######       ################    ###      
 """)
 currentTime = t.ctime()
-print(f.GREEN+ "[" + currentTime.split(" ")[3]  + "]" + " [*] Success loaded Webhook spammer. Made by opw#7777")
+print(f.GREEN+ "[" + currentTime.split(" ")[3]  + "]" + " [*] Success loaded Webhook spammer.")
 sleep(1)
 #Webhook
 print(f.RED + "Input webhook")
